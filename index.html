@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Movies</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: none; /* Esconde o conteúdo inicialmente */
+        }
+        nav {
+            background-color: #ff6600;
+            overflow: hidden;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        nav .logo {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        nav a {
+            display: inline-block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            margin: 20px auto;
+            max-width: 1920px;
+            height: 300px;
+        }
+        .carousel img {
+            min-width: 100%;
+            transition: transform 0.2s ease;
+        }
+        .carousel-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .carousel-button {
+            background-color: white;
+            border: none;
+            padding: 5px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .separator {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            margin: 20px 0;
+        }
+        .category {
+            margin: 20px;
+            text-align: center;
+        }
+        .category h2 {
+            color: white;
+        }
+        .movie-list {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+        .movie-item {
+            flex: 0 0 auto;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .movie-item img {
+            width: 150px;
+            height: 225px;
+        }
+        footer {
+            background-color:#ff6600;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .carousel {
+                height: auto;
+            }
+            .carousel img {
+                height: auto;
+            }
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            background-color: #333;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .modal-content img {
+            width: 40%;
+            height: auto;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .movie-details {
+            flex: 1;
+            text-align: left;
+        }
+        .video-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+        }
+        .video-container video {
+            width: 100%;
+            max-width: 700px;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .logo {
+            width: 300px;
+            animation: spin 2s linear infinite;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="content">
+        <nav>
+            <img src="logo.png" alt="Logo" class="logo">
+            <a href="#home">Home</a>
+            <a href="#acao">Ação</a>
+            <a href="#suspense">Suspense</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <!-- Banner Rotativo -->
+        <div class="carousel">
+            <img src="banner 2.png" alt="Banner 1">
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- Filmes de Ação -->
+        <div class="category" id="acao">
+            <h2>Ação</h2>
+            <div class="movie-list" id="acao-list">
+                <a class="movie-item" href="videos/furia_assassina.mp4" target="_blank"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
+                <a class="movie-item" href="22DEJULHODUB-BAIXO.mp4" target="_blank"><img src="capa 22 de julho.webp" alt="Ação 2"></a>
+                <a class="movie-item" href="Megaquake.mp4" target="_blank"><img src="megaquake.webp" alt="Ação 3"></a>
+                <a class="movie-item" href="ESCURIDAOMORTALDUB-BAIXO.mp4" target="_blank"><img src="capa Escuridão Mortal.webp" alt="Ação 4"></a>
+                <a class="movie-item" href="bala perdida 2.mp4" target="_blank"><img src="Bala perdida 2.webp" alt="Ação 5"></a>
+                <a class="movie-item" href="OMERCENARIOS32014LEG-BAIXO.mp4" target="_blank"><img src="Os mercenários 3.webp" alt="Ação 6"></a>
+                <a class="movie-item" href="videos/acao7.mp4" target="_blank"><img src="Fúria Assassina.webp" alt="Ação 7"></a>
+                <a class="movie-item" href="videos/acao8.mp4" target="_blank"><img src="capa 22 de julho.webp" alt="Ação 8"></a>
+                <a class="movie-item" href="videos/acao9.mp4" target="_blank"><img src="megaquake.webp" alt="Ação 9"></a>
+                <a class="movie-item" href="videos/acao10.mp4" target="_blank"><img src="capa Escuridão Mortal.webp" alt="Ação 10"></a>
+            </div>
+        </div>
+
+        <!-- Filmes de Suspense -->
+        <div class="category" id="suspense">
+            <h2>Suspense</h2>
+            <div class="movie-list" id="suspense-list">
+                <a class="movie-item" href="videos/suspense1.mp4" target="_blank"><img src="capa Escuridão Mortal.webp" alt="Suspense 1"></a>
+                <a class="movie-item" href="videos/suspense2.mp4" target="_blank"><img src="megaquake.webp" alt="Suspense 2"></a>
+                <a class="movie-item" href="videos/suspense3.mp4" target="_blank"><img src="capa 22 de julho.webp" alt="Suspense 3"></a>
+                <a class="movie-item" href="videos/suspense4.mp4" target="_blank"><img src="Fúria Assassina.webp" alt="Suspense 4"></a>
+                <a class="movie-item" href="videos/suspense5.mp4" target="_blank"><img src="Os mercenários 3.webp" alt="Suspense 5"></a>
+                <a class="movie-item" href="videos/suspense6.mp4" target="_blank"><img src="Bala perdida 2.webp" alt="Suspense 6"></a>
+                <a class="movie-item" href="videos/suspense7.mp4" target="_blank"><img src="capa Escuridão Mortal.webp" alt="Suspense 7"></a>
+                <a class="movie-item" href="videos/suspense8.mp4" target="_blank"><img src="megaquake.webp" alt="Suspense 8"></a>
+                <a class="movie-item" href="videos/suspense9.mp4" target="_blank"><img src="capa 22 de julho.webp" alt="Suspense 9"></a>
+                <a class="movie-item" href="videos/suspense10.mp4" target="_blank"><img src="Fúria Assassina.webp" alt="Suspense 10"></a>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <footer>
+            <p>© 2024 Connect Movies. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="movie-details">
+                <h2>Título do Filme</h2>
+                <p>Descrição do filme...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Espera 3 segundos antes de exibir o conteúdo
+            setTimeout(function() {
+                document.querySelector('.logo-container').style.display = 'none'; // Esconde a logo
+                document.querySelector('body').style.display = 'block'; // Exibe o conteúdo
+            }, 1000); // 3 segundos
+        });
+
+        // Modal
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        var movieItems = document.querySelectorAll(".movie-item");
+
+        movieItems.forEach(function(item) {
+            item.onclick = function(event) {
+                event.preventDefault();
+                modal.style.display = "block";
+                var movieTitle = item.querySelector("img").alt;
+                var movieDetails = modal.querySelector(".movie-details");
+                movieDetails.querySelector("h2").innerText = movieTitle;
+                // Aqui você pode adicionar mais detalhes sobre o filme conforme necessário
+            };
+        });
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
