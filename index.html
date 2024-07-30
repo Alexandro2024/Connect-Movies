@@ -12,27 +12,31 @@
             padding: 0;
         }
         nav {
-            background-color: #ff6600;
-            overflow: hidden;
-            text-align: left;
-            display: auto;
+            background-color: #141414;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
             align-items: center;
-            padding: 10px;
+            justify-content: space-between;
+            padding: 0 20px;
         }
         nav .logo {
-            width: 90px;
-            height: auto;
+            height: 36px;
             margin-right: 20px;
         }
         nav a {
-            display: inline-block;
             color: white;
-            padding: 14px 16px;
+            padding: 20px 0;
+            margin-left: 20px;
             text-decoration: none;
         }
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            color: #e50914;
+        }
+        .content {
+            padding-top: 80px; /* Espaço para o menu fixo */
         }
         .carousel {
             display: flex;
@@ -87,7 +91,7 @@
             height: 225px;
         }
         footer {
-            background-color: #ff6600;
+            background-color: #141414;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -225,19 +229,19 @@
     </style>
 </head>
 <body>
-   
-
-    <div class="content">
-        <nav>
-            <img src="logo.png" alt="Logo" class="logo">
-            <a href="#home">Home</a>
+    <nav>
+        <img src="logo.png" alt="Logo" class="logo">
+        <div>
+            <a href="#home">Início</a>
             <a href="#acao">Ação</a>
             <a href="#suspense">Suspense</a>
             <a href="#comedia">Comédia</a>
             <a href="#drama">Drama</a>
             <a href="#contato">Contato</a>
-        </nav>
+        </div>
+    </nav>
 
+    <div class="content">
         <!-- Banner Rotativo -->
         <div class="carousel">
             <img src="banner 1.png" alt="Banner 1">
@@ -254,53 +258,13 @@
                 <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
                 <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
                 <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-                <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="capa/fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
-                <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
-                <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-                <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="capa/fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
-                <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
-                <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-            
             </div>
         </div>
 
         <!-- Filmes de Suspense -->
         <div class="category" id="suspense">
             <h2>Suspense</h2>
-            <div class="movie-list" id="suspense-list">
-                <!-- Adicione seus filmes de suspense aqui -->
-                <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="capa/fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
-                <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
-                <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-                <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="capa/fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
-                <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
-                <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-                <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="capa/fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
-                <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
-                <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-            
-            </div>
-        </div>
-
-        <!-- Filmes de Comédia -->
-        <div class="category" id="comedia">
-            <h2>Comédia</h2>
-            <div class="movie-list" id="comedia-list">
-                <!-- Adicione seus filmes de comédia aqui -->
-                <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="capa/fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
-                <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
-                <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-                <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="capa/fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
-                <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
-                <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-                <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="capa/fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
-                <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
-                <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-            
-            </div>
-        </div>
-
-        <!-- Filmes de Drama -->
+            <!-- Filmes de Drama -->
         <div class="category" id="drama">
             <h2>Drama</h2>
             <div class="movie-list" id="drama-list">
@@ -308,95 +272,70 @@
                 <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="capa/fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
                 <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
                 <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-                <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="capa/fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
-                <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
-                <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-                <a class="movie-item" href="filmes/furia assacina.mp4" data-title="Fúria Assassina" data-details="You Can't Run Forever" data-year="2024" data-duration="102 MIN" data-genres="Drama, Suspense, Terror" data-rating="4.4" data-director="Michelle Schumacher" data-cast="Allen Leech, Fernanda Urrejola, J.K. Simmons" data-image="capa/fúria Assassina.webp" data-video="filmes/furia assacina.mp4"><img src="Fúria Assassina.webp" alt="Fúria Assassina"></a>
-                <a class="movie-item" href="filmes/22DEJULHODUB-BAIXO.mp4" data-title="Exterminador do Futuro" data-details="I'll be back" data-year="1984" data-duration="107 MIN" data-genres="Ação, Ficção Científica" data-rating="8.0" data-director="James Cameron" data-cast="Arnold Schwarzenegger, Linda Hamilton" data-image="capa/22 de julho.webp" data-video="filmes/22DEJULHODUB-BAIXO.mp4"><img src="capa 22 de julho.webp" alt="22 de jolho"></a>
-                <a class="movie-item" href="filmes/Caçando Ava Bravo.mp4" data-title="Mad Max: Estrada da Fúria" data-details="What a Lovely Day" data-year="2015" data-duration="120 MIN" data-genres="Ação, Aventura" data-rating="8.1" data-director="George Miller" data-cast="Tom Hardy, Charlize Theron" data-image="capa/caçando ava bravo.webp" data-video="filmes/caçando ava bravo.mp4"><img src="Caçando Ava Bravo.webp" alt="caçando ava bravo"></a>
-            
-            </div>
-        </div>
-
-        <div class="separator"></div>
-        
-        <footer>
-            <p>&copy; 2023 Conecta Filmes. Todos os direitos reservados.</p>
-        </footer>
-    </div>
-
-    <div id="movieModal" class="movie-detail-modal">
-        <span class="close-detail">&times;</span>
-        <div class="movie-detail-modal-content">
-            <img id="modal-image" src="capa/capa 22 de julho.webp" alt="Capa do Filme">
-            <div class="details">
-                <h2 id="modal-title"></h2>
-                <p id="modal-details"></p>
-                <p><strong>Ano:</strong> <span id="modal-year"></span></p>
-                <p><strong>Duração:</strong> <span id="modal-duration"></span></p>
-                <p><strong>Gêneros:</strong> <span id="modal-genres"></span></p>
-                <p><strong>Classificação:</strong> <span id="modal-rating"></span></p>
-                <p><strong>Diretor:</strong> <span id="modal-director"></span></p>
-                <p><strong>Elenco:</strong> <span id="modal-cast"></span></p>
-                <div class="video-container" id="modal-video-container">
-                    <video id="modal-video" controls>
-                        <source id="modal-video-source" src="capa/capa 22 de julho.webp" type="video/mp4">
-                        Seu navegador não suporta a tag de vídeo.
-                    </video>
-                </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>Conecta Filmes © 2024</p>
+    </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const modal = document.getElementById('movieModal');
-            const closeBtn = document.querySelector('.close-detail');
-            const movieItems = document.querySelectorAll('.movie-item');
+        // Script for the carousel
+        let index = 0;
+        const images = document.querySelectorAll('.carousel img');
+        setInterval(() => {
+            images[index].style.transform = 'translateX(-100%)';
+            index = (index + 1) % images.length;
+            images[index].style.transform = 'translateX(0)';
+        }, 3000);
 
-            const modalTitle = document.getElementById('modal-title');
-            const modalDetails = document.getElementById('modal-details');
-            const modalYear = document.getElementById('modal-year');
-            const modalDuration = document.getElementById('modal-duration');
-            const modalGenres = document.getElementById('modal-genres');
-            const modalRating = document.getElementById('modal-rating');
-            const modalDirector = document.getElementById('modal-director');
-            const modalCast = document.getElementById('modal-cast');
-            const modalImage = document.getElementById('modal-image');
-            const modalVideoContainer = document.getElementById('modal-video-container');
-            const modalVideo = document.getElementById('modal-video');
-            const modalVideoSource = document.getElementById('modal-video-source');
+        // Modal script
+        const movieItems = document.querySelectorAll('.movie-item');
+        const modal = document.querySelector('.movie-detail-modal');
+        const modalContent = document.querySelector('.movie-detail-modal-content');
+        const closeModal = document.querySelector('.close-detail');
 
-            movieItems.forEach(item => {
-                item.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    modalTitle.innerText = item.getAttribute('data-title');
-                    modalDetails.innerText = item.getAttribute('data-details');
-                    modalYear.innerText = item.getAttribute('data-year');
-                    modalDuration.innerText = item.getAttribute('data-duration');
-                    modalGenres.innerText = item.getAttribute('data-genres');
-                    modalRating.innerText = item.getAttribute('data-rating');
-                    modalDirector.innerText = item.getAttribute('data-director');
-                    modalCast.innerText = item.getAttribute('data-cast');
-                    modalImage.src = item.getAttribute('data-image');
-                    modalVideoSource.src = item.getAttribute('data-video');
-                    modalVideo.load();
-                    modalVideoContainer.style.display = 'block';
-                    modal.style.display = 'block';
-                });
+        movieItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const title = item.dataset.title;
+                const details = item.dataset.details;
+                const year = item.dataset.year;
+                const duration = item.dataset.duration;
+                const genres = item.dataset.genres;
+                const rating = item.dataset.rating;
+                const director = item.dataset.director;
+                const cast = item.dataset.cast;
+                const image = item.dataset.image;
+                const video = item.dataset.video;
+
+                modalContent.innerHTML = `
+                    <img src="${image}" alt="${title}">
+                    <div class="details">
+                        <h2>${title}</h2>
+                        <p>${details}</p>
+                        <p><strong>Year:</strong> ${year}</p>
+                        <p><strong>Duration:</strong> ${duration}</p>
+                        <p><strong>Genres:</strong> ${genres}</p>
+                        <p><strong>Rating:</strong> ${rating}</p>
+                        <p><strong>Director:</strong> ${director}</p>
+                        <p><strong>Cast:</strong> ${cast}</p>
+                        <a href="${video}" target="_blank">Watch Now</a>
+                    </div>
+                `;
+                modal.style.display = 'block';
             });
+        });
 
-            closeBtn.addEventListener('click', () => {
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target == modal) {
                 modal.style.display = 'none';
-                modalVideo.pause();
-            });
-
-            window.addEventListener('click', (event) => {
-                if (event.target == modal) {
-                    modal.style.display = 'none';
-                    modalVideo.pause();
-                }
-            });
+            }
         });
     </script>
 </body>
